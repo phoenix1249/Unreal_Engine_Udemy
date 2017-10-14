@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include "main.h"
-#include "FBull_Cows_Game.h"
+#include "FBullCowGame.h"
 
 
 int main()
@@ -37,9 +37,8 @@ std::string Guess_Word()
 
 void Play_Game()
 {
-	FBull_Cows_Game BCGame;
-	int nb_Try = BCGame.GetMaxTries();
-	
+	FBullCowsGame BCGame;
+	int nb_Try=2;
 	for (int i=0;i<nb_Try;i++)
 	{
 		std::string Guess = "";

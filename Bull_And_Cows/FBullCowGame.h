@@ -1,14 +1,14 @@
-#include <iostream>
 #include <string>
 
-class FBull_Cows_Game
+class FBullCowsGame
 {
 public:
+	void Reset();
 	int GetMaxTries();
 	int GetCurrentTries();
 	bool IsGameWon();
 	bool CheckGuessValidity(std::string);
-	void Reset();
+	
 
 private:
 	std::string Unknow_Word;
