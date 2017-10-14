@@ -1,17 +1,17 @@
 #include <iostream>
 #include <string>
 #include "main.h"
+#include "FBull_Cows_Game.h"
 
 
 int main()
 {	
 	const int Length_Word = 5;
-	const int nb_Try = 3;
 
 	do
 	{
 		Intro(Length_Word);
-		Play_Game(nb_Try);
+		Play_Game();
 	}while (Play_Again());
 
 
@@ -35,8 +35,11 @@ std::string Guess_Word()
 	return guess;
 }
 
-void Play_Game(int nb_Try)
+void Play_Game()
 {
+	FBull_Cows_Game BCGame;
+	int nb_Try = BCGame.GetMaxTries();
+	
 	for (int i=0;i<nb_Try;i++)
 	{
 		std::string Guess = "";
