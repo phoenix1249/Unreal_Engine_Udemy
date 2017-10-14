@@ -8,8 +8,12 @@ int main()
 	const int Length_Word = 5;
 	const int nb_Try = 3;
 
-	Intro(Length_Word);
-	PlayGame(nb_Try);
+	do
+	{
+		Intro(Length_Word);
+		Play_Game(nb_Try);
+	}while (Play_Again());
+
 
 
 
@@ -31,7 +35,7 @@ std::string Guess_Word()
 	return guess;
 }
 
-void PlayGame(int nb_Try)
+void Play_Game(int nb_Try)
 {
 	for (int i=0;i<nb_Try;i++)
 	{
@@ -39,4 +43,13 @@ void PlayGame(int nb_Try)
 		Guess = Guess_Word();
 		std::cout<< "Your guess was: "<<Guess<<std::endl<<std::endl;
 	}
+}
+
+bool Play_Again()
+{
+	std::string ask="";
+	std::cout<< "Play again ? (y/n)";
+	std::getline(std::cin,ask);
+
+	return (ask[0]=='y') || (ask[0]=='Y');
 }
