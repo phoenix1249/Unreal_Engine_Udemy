@@ -8,7 +8,7 @@ public:
 	int GetCurrentTries();
 	bool IsGameWon();
 	bool CheckGuessValidity(std::string);
-	
+
 
 private:
 	std::string Unknow_Word;
