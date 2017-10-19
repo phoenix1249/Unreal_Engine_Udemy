@@ -3,6 +3,8 @@
 #include "main.h"
 #include "FBullCowGame.h"
 
+FBullCowGame BCGame;
+
 
 int main()
 {	
@@ -29,6 +31,9 @@ void Intro(int nb_Letter)
 
 std::string Guess_Word()
 {
+	int current_try=BCGame.GetCurrentTries();
+
+	std::cout<<"Try "<<current_try<<" ";
 	std::string guess = "";
 	std::cout<<"Enter your guess: ";
 	std::getline(std::cin,guess);
@@ -37,9 +42,11 @@ std::string Guess_Word()
 
 void Play_Game()
 {
-	FBullCowsGame BCGame;
-	int nb_Try=2;
-	for (int i=0;i<nb_Try;i++)
+	BCGame.Reset();
+	int Max_Tries = BCGame.GetMaxTries();
+	std::cout<<Max_Tries<<std::endl;
+
+	for (int i=0;i<Max_Tries;i++)
 	{
 		std::string Guess = "";
 		Guess = Guess_Word();

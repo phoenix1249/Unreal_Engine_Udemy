@@ -1,3 +1,4 @@
+#include <iostream>
 
 void Intro(int nb_Letter);
 void Play_Game();
