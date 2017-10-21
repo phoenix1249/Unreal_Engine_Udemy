@@ -2,5 +2,5 @@
 
 void Intro(int nb_Letter);
 void Play_Game();
-std::string Guess_Word();
+std::string GuessValidGuess();
 bool Play_Again();
