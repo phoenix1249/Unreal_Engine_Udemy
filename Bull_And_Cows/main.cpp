@@ -24,7 +24,7 @@ int main(){
 
 void Intro(int nb_Letter) {
 	std::cout<< "\nWelcome to Bull and Cows\n";
-	std::cout<< "Can you guess the "<<nb_Letter<<" letters isogram I'm thinking of?\n";	
+	std::cout<< "Can you guess the "<<nb_Letter<<" letters isogram I'm thinking of in less than "<<BCGame.GetMaxTries()<<" tries?\n";	
 };
 
 std::string GuessValidGuess(){
@@ -59,7 +59,6 @@ std::string GuessValidGuess(){
 void Play_Game() {
 	BCGame.Reset();
 	int Max_Tries = BCGame.GetMaxTries();
-	std::cout<<Max_Tries<<std::endl;
 
 	while (!BCGame.IsGameWon() && BCGame.GetCurrentTries()<=Max_Tries){
 		std::string Guess = "";
@@ -68,6 +67,7 @@ void Play_Game() {
 		std::cout<<"Bulls: "<<BCC.Bull<<" Cows: "<<BCC.Cow<<std::endl;
 		std::cout<< "Your guess was: "<<Guess<<"\n\n";
 	}
+	PrintGameSummary();
 };
 
 bool Play_Again() {
@@ -76,4 +76,12 @@ bool Play_Again() {
 	std::getline(std::cin,ask);
 
 	return (ask[0]=='y') || (ask[0]=='Y');
+}
+
+void PrintGameSummary(){
+	if (BCGame.IsGameWon()){
+		std::cout<<"Good Job You Win, ";
+	}else{
+		std::cout<<"Sorry maybe next time\n";
+	}
 }

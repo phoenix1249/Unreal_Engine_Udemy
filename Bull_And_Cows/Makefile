@@ -1,4 +1,5 @@
 main: main.o FBullCowGame.o
+	clear
 	g++ -std=c++11 -o main main.o FBullCowGame.o
 
 main.o: main.cpp main.h FBullCowGame.h

@@ -12,7 +12,7 @@ FBullCowGame::FBullCowGame(){Reset();};
 
 
 void FBullCowGame::Reset(){
-	MyMaxTries=8;
+	MyMaxTries=3;
 	MyCurrentTries=1;
 	UnknowWord="ant";
 	GameWon=false;
