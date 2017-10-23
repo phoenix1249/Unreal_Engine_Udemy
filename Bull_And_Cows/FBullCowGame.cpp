@@ -19,8 +19,7 @@ void FBullCowGame::Reset(){
 	return;
 };
 
-EGuessCheck FBullCowGame::CheckGuessValidity(std::string Guess) const
-{
+EGuessCheck FBullCowGame::CheckGuessValidity(std::string Guess) const{
 	if (false){
 
 		return EGuessCheck::Not_Isogram;

@@ -30,14 +30,11 @@ public:
 	void Reset();
 	BullCowCount SubmitGuess(std::string);
 
-
 private:
 	std::string UnknowWord;
 	int MyCurrentTries;
 	int MyMaxTries;
 	bool GameWon;
-
-
 };
 
 #endif
